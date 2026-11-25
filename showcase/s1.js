@@ -11,7 +11,7 @@ const CO = 'Smolder & Snooze Dragon Daycare';
 const FED = 'Fed by a sourcing tracker worksheet he built with live data connections to the team\'s recruiting systems, and by his own outreach templates for text, email, and messaging.';
 const STAGES = ['Sourced', 'Screening', 'Qualified', 'Interview Process Completed', 'No Show', 'Needs More Info'];
 const GROUPS = [['same', 'Same-day'], ['hm', 'Hiring Manager Follow-up'], ['fb', 'Interview Feedback'], ['cand', 'Candidate Follow-up']];
-const CHANNELS = ['Text', 'Email', 'Job board message', 'LinkedIn'];
+const CHANNELS = ['Text', 'Email', 'Job board message', 'Professional network'];
 const FUNNEL = ['New', 'Recruiter reviewed', 'Manager review', 'Selected to interview', 'Scheduling', 'First interview', 'Second interview', 'Offer', 'Hired', 'Declined'];
 const VIEWS = [['today', 'Today', 'to contact'], ['cands', 'Candidates', 'active'], ['reqs', 'Reqs', 'open'], ['log', 'Log', 'changes'], ['more', 'More', '']];
 const DISP = ['Withdrew: prefers griffins.', 'Not a fit: flammable hobbies.', 'Position filled.', 'Unreachable after 3 follow-ups.'];
@@ -40,7 +40,7 @@ const TPL = {
   'Job board message': [
     ['Saw your profile', 'Hello {n}, your profile mentions calm nerves and short sleeves. Both suit our {r} opening at {co}. Open to a quick chat?'],
     ['Screening follow-up', 'Hello {n}, thank you for answering the screening questions. One more: how do you feel about glitter in a hoard?']],
-  LinkedIn: [
+  'Professional network': [
     ['Friendly first note', 'Hi {n}, I source for {co}. Your background looks like a fit for {r}. May I send the details?'],
     ['Gentle second knock', 'Hi {n}, following up on the {r} role. The dragons asked about you. Well, one did.']],
 };
@@ -63,12 +63,12 @@ function seed() {
       { id: 'c2', name: 'Brisket Toastington', stage: 2, req: 'R-0077', last: -5, next: -2, fu: 2, src: 'Referral from a griffin', grade: 'A', inAts: 'Yes', quest: 'Yes', pref: 'Email', sourced: -14,
         ats: 'Manager review.', note: 'Submitted to the hiring manager. Waiting on review.',
         answered: [['Last lair?', 'Resume lists 40 dragons and one very large goose.']], notes: [[-5, 'Submitted to hiring manager with resume and screening answers.']] },
-      { id: 'c3', name: 'Fizzle Underbrook', stage: 3, req: 'R-0077', last: -3, next: -1, fu: 2, src: 'LinkedIn', grade: 'B+', inAts: 'Yes', quest: 'Yes', pref: 'Text', sourced: -21,
+      { id: 'c3', name: 'Fizzle Underbrook', stage: 3, req: 'R-0077', last: -3, next: -1, fu: 2, src: 'Professional network', grade: 'B+', inAts: 'Yes', quest: 'Yes', pref: 'Text', sourced: -21,
         ats: 'Second interview complete. Feedback pending.', note: 'Both interviews done. Keeper feedback not in yet.',
         answered: [['Start date?', 'Two moons. From first interview notes.'], ['Why did you leave?', 'Earlier reply: "Creative differences with a volcano."']], notes: [[-3, 'Second interview went well. Only one eyebrow lost.']] },
       { id: 'c4', name: 'Glorp Nettlewhisk', stage: 5, req: 'R-0113', last: -2, next: 0, fu: 3, src: 'Job board', grade: 'B', inAts: 'Yes', quest: 'Partly', pref: 'Text', sourced: -10,
         ats: 'Recruiter reviewed.', note: 'Still missing proof of fireproof mittens.', answered: [], notes: [] },
-      { id: 'c5', name: 'Tansy Emberquill', stage: 0, req: 'R-0042', last: 0, next: 0, fu: 1, src: 'LinkedIn', grade: 'Not graded yet', inAts: 'No', quest: 'No', pref: 'LinkedIn', sourced: -1,
+      { id: 'c5', name: 'Tansy Emberquill', stage: 0, req: 'R-0042', last: 0, next: 0, fu: 1, src: 'Professional network', grade: 'Not graded yet', inAts: 'No', quest: 'No', pref: 'Professional network', sourced: -1,
         ats: 'Not in ATS yet.', note: 'Replied to first outreach. Screening questions go out next.', answered: [], notes: [] },
       { id: 'c6', name: 'Dobbin Scorchmitten', stage: 4, req: 'R-0113', last: -4, next: 3, fu: 2, src: 'Hiring fair (cave 3)', grade: 'C', inAts: 'Yes', quest: 'Yes', pref: 'Call', sourced: -18,
         ats: `Disqualified: missed two interviews, said a dragon ate the calendar. ${fmt(-3)}, 2:15 PM.`, note: 'No show twice. One last check-in planned.',
@@ -80,7 +80,7 @@ function seed() {
     queue: [
       { id: 'q1', g: 'same', c: 'c1', since: 0, fu: 1, due: 0, ch: ['Job board message'], last: ['Job board message', 'job board inbox'],
         text: 'Answered every screening question overnight. Asks if nap duty includes lullabies. Owes a same-day reply.' },
-      { id: 'q2', g: 'same', c: 'c5', since: 0, fu: 1, due: 0, ch: ['LinkedIn'], last: ['LinkedIn', 'chat messages'],
+      { id: 'q2', g: 'same', c: 'c5', since: 0, fu: 1, due: 0, ch: ['Professional network'], last: ['Professional network', 'chat messages'],
         text: 'New reply to first outreach: interested, wants pay in coins, not buttons. Send screening questions today.' },
       { id: 'q3', g: 'hm', c: 'c2', since: -5, fu: 2, due: -2, ch: ['Email', 'Call'], last: ['Email', 'sent email'],
         text: 'Submitted to Mumble Ashpocket 5 days ago. No review yet. Last exchange: "Busy, lair on fire, back soon."' },
