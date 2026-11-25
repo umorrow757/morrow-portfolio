@@ -58,6 +58,7 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
   <nav class="nav" aria-label="Pages">
     <a href="index.html">Home</a>
     <a href="undrae.html">Undrae Morrow</a>
+    <a href="undrae.html#why-me">Why work with me</a>
     <a href="jenna.html">Jenna Morrow</a>
     <a href="showcase.html" aria-current="page">Showcase</a>
     <a href="work.html">Work history</a>
@@ -149,13 +150,40 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
             <div><dt>How it works</dt><dd>Four tabs on one pretend dragon daycare: content pipeline, app and game building, business, and finance. Every name and number is invented.</dd></div>
           </dl>
           <div class="demo" data-demo="s9" style="min-height:var(--s9-h,40rem)"><p class="demo-wait">The working example loads here. It needs JavaScript.</p></div>
-          <figure class="vidfig">
-            <video class="vid" controls preload="none" playsinline aria-label="Video walkthrough: dashboard examples">
-              <source data-src="[CONFIRM: video file]" type="video/mp4">
-              <track kind="captions" srclang="en" label="English captions" data-src="[CONFIRM: captions file]">
-            </video>
-            <figcaption>Video walkthrough with captions.</figcaption>
-          </figure>
+          <div class="vid4">
+            <figure class="vidfig">
+              <video class="vid" controls preload="none" playsinline aria-label="Video walkthrough: Content pipeline dashboard">
+                <source src="videos/d9-content.mp4" type="video/mp4">
+                <track kind="captions" srclang="en" label="English captions" src="videos/d9-content.vtt" default>
+              </video>
+              <figcaption>Content pipeline. Silent, with captions.</figcaption>
+              <p class="transcript">Sample data. Pretend company. Every piece and where it stands. This month's goals, as progress bars. Updates roll by. Pause them any time. Point at a week to read its views.</p>
+            </figure>
+            <figure class="vidfig">
+              <video class="vid" controls preload="none" playsinline aria-label="Video walkthrough: App and game building dashboard">
+                <source src="videos/d9-builds.mp4" type="video/mp4">
+                <track kind="captions" srclang="en" label="English captions" src="videos/d9-builds.vtt" default>
+              </video>
+              <figcaption>App and game building. Silent, with captions.</figcaption>
+              <p class="transcript">Sample data. Pretend company. Every build and its status. Tasks done on each build. Blocked work is flagged on the board. Point at a week to read tasks closed.</p>
+            </figure>
+            <figure class="vidfig">
+              <video class="vid" controls preload="none" playsinline aria-label="Video walkthrough: Business dashboard">
+                <source src="videos/d9-business.mp4" type="video/mp4">
+                <track kind="captions" srclang="en" label="English captions" src="videos/d9-business.vtt" default>
+              </video>
+              <figcaption>Business. Silent, with captions.</figcaption>
+              <p class="transcript">Sample data. Pretend company. Four pretend lairs on one board. Beds filled at each lair. The headline numbers sit up top. Point at a month to read enrollment.</p>
+            </figure>
+            <figure class="vidfig">
+              <video class="vid" controls preload="none" playsinline aria-label="Video walkthrough: Finance dashboard">
+                <source src="videos/d9-finance.mp4" type="video/mp4">
+                <track kind="captions" srclang="en" label="English captions" src="videos/d9-finance.vtt" default>
+              </video>
+              <figcaption>Finance. Silent, with captions.</figcaption>
+              <p class="transcript">Sample data. Pretend company. Pretend money at a glance. Spent against budget, line by line. Over budget is flagged on the board. Point at a month to read revenue.</p>
+            </figure>
+          </div>
         </article>
 
         <!-- S2 -->
@@ -342,6 +370,7 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
 
 <footer class="wrap foot" id="foot">
   <p>&copy; 2026 Morrow Portfolio. All demos on this site use sample data.</p>
+  <p class="views" id="site-views" hidden>Site views: <b id="view-count"></b></p>
 </footer>
 </body>
 </html>

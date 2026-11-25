@@ -245,7 +245,70 @@ function initCopy() {
   });
 }
 
+/* ---------- Why work with me: pick a hiring headache ---------- */
+// Matching reasons move to the top and get a label. Instant: nothing animates.
+function initWhyMe() {
+  const pick = $('#why-pick');
+  const list = $('#why-reasons');
+  const st = $('#why-status');
+  if (!pick || !list || !st) return;
+  const cards = $$('.why-card', list);
+  const pills = $$('.tog', pick);
+  pick.hidden = false;
+  pick.addEventListener('click', (e) => {
+    const b = e.target.closest('.tog');
+    if (!b) return;
+    const on = b.getAttribute('aria-pressed') !== 'true';
+    pills.forEach((p) => p.setAttribute('aria-pressed', String(on && p === b)));
+    const key = on ? b.dataset.fit : '';
+    const hits = cards.filter((c) => key && (c.dataset.fit || '').split(' ').includes(key));
+    hits.concat(cards.filter((c) => !hits.includes(c))).forEach((c) => {
+      const hit = hits.includes(c);
+      c.classList.toggle('hit', hit);
+      const t = $('.why-tag', c);
+      if (t) t.hidden = !hit;
+      list.append(c);
+    });
+    st.textContent = key ? `${hits.length} reasons answer "${b.textContent}". They're listed first.` : 'Showing every reason.';
+  });
+}
+
+/* ---------- Why work with TwoMorrows HR: one panel at a time ---------- */
+// Without JavaScript every panel shows. With it, a button group picks one.
+function initSwitches() {
+  $$('[data-switch]').forEach((g) => {
+    const btns = $$('button[data-show]', g);
+    const show = (b) => btns.forEach((x) => {
+      const on = x === b;
+      x.setAttribute('aria-pressed', String(on));
+      const p = document.getElementById(x.dataset.show);
+      if (p) p.hidden = !on;
+    });
+    g.hidden = false;
+    g.addEventListener('click', (e) => { const b = e.target.closest('button[data-show]'); if (b) show(b); });
+    show(btns[0]);
+  });
+}
+
 initShowcase();
+function initViews() {
+  const wrap = document.getElementById('site-views');
+  const out = document.getElementById('view-count');
+  if (!wrap || !out) return;
+  const live = location.hostname === 'umorrow757.github.io';
+  const url = 'https://abacus.jasoncameron.dev/' + (live ? 'hit' : 'get') + '/umorrow757-morrow-portfolio/site-views';
+  const attempt = (n) => {
+    fetch(url).then((r) => r.json()).then((d) => {
+      if (typeof d.value !== 'number') throw new Error('bad count');
+      out.textContent = d.value.toLocaleString('en-US');
+      wrap.hidden = false;
+    }).catch(() => { if (n < 5) setTimeout(() => attempt(n + 1), n * 2000); });
+  };
+  attempt(1);
+}
 initJumps();
 initReveals();
 initCopy();
+initWhyMe();
+initSwitches();
+initViews();

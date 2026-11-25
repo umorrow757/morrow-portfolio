@@ -60,6 +60,7 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
   <nav class="nav" aria-label="Pages">
     <a href="index.html">Home</a>
     <a href="undrae.html" aria-current="page">Undrae Morrow</a>
+    <a href="#why-me">Why work with me</a>
     <a href="jenna.html">Jenna Morrow</a>
     <a href="showcase.html">Showcase</a>
     <a href="work.html">Work history</a>
@@ -88,7 +89,7 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
   <section id="undrae" aria-labelledby="h-undrae" tabindex="-1">
     <div class="glass res-frame">
       <div class="plate res reveal">
-        <h3>His background</h3>
+        <h3 id="h-undrae">His background</h3>
         <p>Nearly a decade in HR and training. Talent Acquisition Sourcer at Harbor Group; before that, Recruiting &amp; Workforce Operations Manager at LEAD Staffing, running high-volume industrial and marine recruiting, including cleared positions tied to federal contracts. At Topgolf he worked in corporate training and recruiting and was on the early pilot when Microsoft Copilot first rolled out.</p>
       </div>
       <div class="plate res reveal">
@@ -108,6 +109,66 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
         <a class="textlink" href="examples/interview-guide.html">Use the interview guide on the site</a><br>
         <a class="textlink" href="examples/slate.html">View the slate on the site</a>
       </div>
+    </div>
+  </section>
+
+  <!-- WHY WORK WITH ME (Batch C port) -->
+  <section id="why-me" aria-labelledby="h-why-me" tabindex="-1">
+    <div class="sec-head">
+      <p class="kicker">Reasons, with proof</p>
+      <h2 id="h-why-me">Why work with me</h2>
+      <p class="sec-sub">I lead recruiting and HR, and I build the tools my teams use. Each reason below links to a working example on pretend data.</p>
+    </div>
+    <div class="why-top">
+      <div>
+        <figure class="vidfig" id="why-me-video" tabindex="-1">
+          <video class="vid" controls preload="none" playsinline aria-label="Why work with me, video with captions">
+            <source data-src="[CONFIRM: video file]" type="video/mp4">
+            <track kind="captions" srclang="en" label="English captions" data-src="[CONFIRM: captions file]">
+          </video>
+          <figcaption>Voices are AI stand-ins until our own recordings are in.</figcaption>
+        </figure>
+        <details class="why-tx">
+          <summary>Read the transcript</summary>
+          <p>I'm Undrae. I lead recruiting and HR, and I build the tools my teams use. I hire for fit and skill. Fifty-one percent is who you are. Forty-nine is what you know. My sourcing command center puts the whole recruiting desk on one screen. My role pages show candidates the pay math before they apply. Hospitality taught me service. People remember how you made them feel. I set up AI agents, test them and check their work, so my team spends its time on people. SHRM-CP certified. Nearly a decade hiring and leading teams. Try the examples here, or find me on LinkedIn.</p>
+          <p>Voices are AI stand-ins until our own recordings are in.</p>
+        </details>
+      </div>
+      <ul class="why-facts" aria-label="Facts">
+        <li>SHRM-CP certified</li>
+        <li>Old Dominion University — Human Resources Management</li>
+        <li>Nearly a decade at Topgolf</li>
+        <li>Nearly a decade hiring and leading teams</li>
+      </ul>
+    </div>
+    <div class="why-pick" id="why-pick" hidden>
+      <p class="why-q" id="why-q">What's your hiring headache?</p>
+      <div class="seg" role="group" aria-labelledby="why-q">
+        <button type="button" class="tog" aria-pressed="false" aria-controls="why-reasons" data-fit="open">Roles sit open too long</button>
+        <button type="button" class="tog" aria-pressed="false" aria-controls="why-reasons" data-fit="decide">Managers can't decide</button>
+        <button type="button" class="tog" aria-pressed="false" aria-controls="why-reasons" data-fit="drop">Candidates drop off</button>
+        <button type="button" class="tog" aria-pressed="false" aria-controls="why-reasons" data-fit="lead">New managers struggle</button>
+        <button type="button" class="tog" aria-pressed="false" aria-controls="why-reasons" data-fit="busy">Too much busywork</button>
+      </div>
+      <p class="why-status" id="why-status" aria-live="polite"></p>
+    </div>
+    <ul class="why-reasons" id="why-reasons">
+      <li class="plate why-card" data-fit="drop lead"><span class="why-tag" hidden>Answers this headache</span><h3>Fit first: 51 who you are, 49 what you know.</h3><p>My role pages show the team and the work up front, not just a list of requirements.</p><a class="textlink" href="showcase.html#showcase" data-open="s5">See a role page &rarr;</a></li>
+      <li class="plate why-card" data-fit="open decide busy"><span class="why-tag" hidden>Answers this headache</span><h3>One screen for the whole recruiting desk.</h3><p>Today's follow-ups, candidates and open roles in one queue, worked top-down.</p><a class="textlink" href="showcase.html#showcase" data-open="s1">See the command center &rarr;</a></li>
+      <li class="plate why-card" data-fit="open drop"><span class="why-tag" hidden>Answers this headache</span><h3>Candidates see the job, the pay math and the team before they apply.</h3><p>Pay up front, with the math shown.</p><a class="textlink" href="showcase.html#showcase" data-open="s5">See the pay math &rarr;</a></li>
+      <li class="plate why-card" data-fit="decide"><span class="why-tag" hidden>Answers this headache</span><h3>Faster decisions from hiring managers.</h3><p>A one-page slate a hiring manager can answer in one tap.</p><a class="textlink" href="showcase.html#showcase" data-open="s10">See the slate &rarr;</a></li>
+      <li class="plate why-card" data-fit="open busy"><span class="why-tag" hidden>Answers this headache</span><h3>AI agents set up, tested and checked, so people get the time.</h3><p>Every step is logged, and a person approves before anything ships.</p><a class="textlink" href="showcase.html#showcase" data-open="s7">See the agent bench &rarr;</a></li>
+      <li class="plate why-card" data-fit="drop lead"><span class="why-tag" hidden>Answers this headache</span><h3>Hospitality-grade service.</h3><p>Hospitality taught me service. People remember how you made them feel.</p><a class="textlink" href="#why-me-video">Watch the video &rarr;</a></li>
+      <li class="plate why-card" data-fit=""><h3>But you're not an engineer?</h3><p>Right. I design, direct and check the build; AI agents write code, people review it.</p><a class="textlink" href="showcase.html#showcase" data-open="s7">See how the bench works &rarr;</a></li>
+    </ul>
+    <div class="plate why-plan">
+      <p class="kicker">Sample plan for a pretend team</p>
+      <h3>My first 90 days at Smolder &amp; Snooze Dragon Daycare</h3>
+      <ol>
+        <li><b>Day 30: listen</b><p>Meet every hiring manager, list the open roles and find where candidates drop off.</p><span class="cc-track" aria-hidden="true"><span class="cc-bar" style="width:33%"></span></span></li>
+        <li><b>Day 60: build</b><p>One recruiting desk screen, and role pages for the three hardest roles.</p><span class="cc-track" aria-hidden="true"><span class="cc-bar" style="width:67%"></span></span></li>
+        <li><b>Day 90: check</b><p>Review follow-ups and time to fill with the team each week, and adjust.</p><span class="cc-track" aria-hidden="true"><span class="cc-bar" style="width:100%"></span></span></li>
+      </ol>
     </div>
   </section>
 
@@ -136,6 +197,7 @@ body.jenna-view .brand-jenna span{color:var(--indigo-text)}
 
 <footer class="wrap foot" id="foot">
   <p>&copy; 2026 Morrow Portfolio. All demos on this site use sample data.</p>
+  <p class="views" id="site-views" hidden>Site views: <b id="view-count"></b></p>
 </footer>
 </body>
 </html>

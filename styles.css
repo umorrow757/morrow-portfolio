@@ -204,6 +204,8 @@ html:not(.js) .sc-grid{display:none}
 .c-label{font:600 .76rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:5.5rem}
 .copy-status{color:var(--muted);font-size:.92rem}
 .foot{margin-top:64px;padding-block:26px 40px;border-top:1px solid var(--line2);color:var(--muted);font-size:.9rem}
+.foot .views{margin-top:6px;font-size:.82rem}
+.foot .views b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
 
 /* ---------- S1 sourcing command center ---------- */
 .cc{display:grid;gap:14px}
@@ -508,3 +510,44 @@ html:not(.js) .sc-grid{display:none}
 .st-rec{padding-top:10px;border-top:1px solid var(--line2)}
 .transcript{color:var(--muted);font-size:.95rem}
 @media (max-width:599px){.st-facts{grid-template-columns:1fr 1fr}.st-two,.st-qa{grid-template-columns:1fr}.st-time li{grid-template-columns:1fr 5.8rem}.st-time li>p:first-child{grid-column:1/-1}}
+/* c1 why work with me */
+.why-top{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--gap);align-items:start}
+@media (max-width:800px){.why-top{grid-template-columns:minmax(0,1fr)}}
+.why-facts{display:grid;gap:var(--gap)}
+.why-facts li{padding:14px;background:var(--bg2);border:1px solid var(--line2);border-radius:12px;font-weight:700}
+.why-tx{margin-top:8px;color:var(--muted)}
+.why-tx p+p{margin-top:8px}
+.why-tx summary{display:flex;align-items:center;min-height:44px;cursor:pointer;color:var(--indigo-text);font-weight:600}
+.why-pick{display:grid;gap:10px;margin-top:28px}
+.why-pick[hidden],.why-tag[hidden]{display:none}
+.why-q{font-weight:700}
+.why-status{min-height:1.4em;color:var(--muted);font-size:.92rem}
+.why-reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:var(--gap);margin-top:14px}
+.why-card{display:grid;gap:8px;align-content:start}
+.why-card p,.why-plan p{color:var(--muted)}
+.why-card.hit{border-color:var(--indigo-text);box-shadow:inset 0 0 0 1px var(--indigo-text)}
+.why-tag{font:600 .74rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--indigo-text)}
+.why-plan{display:grid;gap:8px;margin-top:28px}
+.why-plan ol{display:grid;gap:14px;margin-top:6px}
+.why-plan li{display:grid;gap:4px}
+.why-plan .cc-track{display:block}
+/* c2 why work with twomorrows */
+.why-h{margin-top:36px;font-size:clamp(1.4rem,3vw,1.9rem)}
+.why-promise{margin:6px 0 14px;color:var(--muted)}
+.why-ex{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--gap);margin-top:var(--gap)}
+.why-box,.why-panel,.why-steps-card{display:grid;gap:10px;align-content:start}
+.why-box h4,.why-steps-card h4{font-size:1.1rem}
+.why-panel h5{font-weight:700}
+.why-note,.why-steps p,.why-gates p,.why-rank span{color:var(--muted)}
+.why-gates li{display:grid;grid-template-columns:minmax(0,6.5rem) auto minmax(0,1fr);gap:4px 10px;align-items:center;padding:8px 0;border-top:1px solid var(--line2)}
+@media (max-width:600px){.why-gates li{grid-template-columns:auto 1fr}.why-gates li p{grid-column:1/-1}}
+.why-verdict{font-weight:700}
+.why-rank,.why-steps{display:grid;gap:10px}
+.why-rank li,.why-steps li{display:grid;gap:2px}
+.kt-idle{border-style:dotted}
+.why-svc{margin-bottom:10px}
+.why-box h4,.why-steps-card h4,.why-panel h5{margin:0}
+.why-box .tog{padding:8px 14px;text-align:left}
+.why-box .seg[hidden],.why-panel[hidden]{display:none}
+/* c4 dashboard videos */
+.vid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--gap)}
